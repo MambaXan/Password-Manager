@@ -1,0 +1,404 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+.main_page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .main_page_passwords {
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .saved {
+      font-size: 16px;
+      color: #666;
+      margin-top: 8px;
+    }
+  }
+
+  .saved_passwords_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &_buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      button {
+        background: #f0f2f5;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #e0e2e5;
+        }
+      }
+    }
+
+    .no-passwords {
+      color: #999;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .add-password-section {
+    margin-top: 30px;
+    text-align: center;
+
+    button {
+      background: #4a6cf7;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #3a5ce4;
+      }
+    }
+  }
+}
+
+.addPasswordBtn {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background: rgb(232, 237, 242);
+  border: none;
+  color: black;
+  cursor: pointer;
+  p {
+    color: black;
+    font-size: 26px;
+  }
+}
+
+.saved_passwords_card {
+  position: relative;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #ff4757;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0 8px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        color: #ff6b81;
+      }
+    }
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.saved_passwords_card.deleting {
+  animation: fadeOut 0.3s forwards;
+}
+
+@media (max-width: 768px) {
+  .main_page {
+    padding: 16px;
+
+    .main_page_passwords_title {
+      h1 {
+        font-size: 20px;
+      }
+
+      .saved {
+        font-size: 14px;
+      }
+    }
+
+    .saved_passwords_cards {
+      .saved_passwords_card {
+        padding: 14px;
+
+        h4 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        button {
+          font-size: 13px;
+          padding: 6px 10px;
+        }
+
+        &_buttons {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+      }
+
+      .no-passwords {
+        font-size: 14px;
+        padding: 16px;
+      }
+    }
+
+    .add-password-section {
+      button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .addPasswordBtn {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .saved_passwords_card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .delete-btn {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .main_page {
+    padding: 12px;
+
+    .main_page_passwords_title {
+      h1 {
+        font-size: 18px;
+      }
+
+      .saved {
+        font-size: 13px;
+      }
+    }
+
+    .saved_passwords_cards {
+      .saved_passwords_card {
+        padding: 12px;
+
+        h4 {
+          font-size: 15px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        button {
+          font-size: 12px;
+          padding: 6px 8px;
+        }
+      }
+
+      .no-passwords {
+        font-size: 13px;
+        padding: 14px;
+      }
+    }
+
+    .add-password-section {
+      button {
+        font-size: 13px;
+        padding: 10px 18px;
+      }
+    }
+  }
+
+  .add-password-modal {
+    .modal-content {
+      padding: 16px;
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .form-group {
+        input {
+          font-size: 13px;
+        }
+
+        label {
+          font-size: 12px;
+        }
+      }
+
+      .form-actions {
+        gap: 8px;
+
+        button {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .addPasswordBtn {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+.add-password-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #111;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-group {
+    text-align: left;
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: #4a6cf7;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button[type="submit"] {
+      background-color: #4a6cf7;
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background-color: #3a5ce4;
+      }
+    }
+
+    button[type="button"] {
+      background: none;
+      border: 1px solid #ccc;
+      color: #333;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
