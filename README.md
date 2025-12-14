@@ -22,9 +22,17 @@ A simple and responsive password manager built with **React** and **SCSS**, desi
 
 ## 📸 Screenshots
 
-| Main Page | Add Password | Important Passwords | ShowHide Passwords |
-|-----------|---------------|---------------------|
-| ![Main](./src/Images/MainPage.png) | ![Add](./src/Images/AddPassword.png) | ![Starred](./src/Images/ImporantPasswords.png) | ![ShowHide](./src/Images/ShowHidePassword.png)
+### 🏠 Main Page 
+![Main](./src/Images/MainPage.png)
+
+### ➕ Adding Password
+![Add](./src/Images/AddPassword.png)
+
+### ❗️ Important Passwords
+![Starred](./src/Images/ImporantPasswords.png)
+
+### 🚫 Show/Hide Passwords
+![ShowHide](./src/Images/ShowHidePassword.png)
 
 ## 🔧 Installation
 
